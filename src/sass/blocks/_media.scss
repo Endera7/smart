@@ -1,0 +1,154 @@
+@media (max-width: 1200px){
+    .header {
+        &__official {
+            font-size: 13px;
+        }
+    }
+    .promo {
+        &__header {
+            font-size: 39px;
+        }
+        &__subheader {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .promo {
+        padding: 21px 20px 93px 20px;
+        &__header {
+            font-size: 36px;
+        }
+        &__subheader {
+            font-size: 19px;
+        }
+    }
+    .advantages {
+        padding: 73px 10px 65px 10px;
+        &__icon {
+            max-width: 214px;
+        }
+        &__header {
+            font-size: 28px;
+        }
+        &__title {
+            font-size: 17px;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__official{
+            display: none;
+        }
+        &__phone {
+            font-size: 19px;
+        }
+        button {
+            width: 165px;
+            height: 35px;
+            font-size: 13px;
+        }
+    }
+    .promo {
+        &__header {
+            font-size: 33px;
+        }
+        &__subheader {
+            font-size: 18px;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        &__icon {
+            max-width: 330px;
+            &:not(:first-child){
+                margin-top: 40px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        &__subtitle {
+            margin-top: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .promo {
+        &__wrapper {
+            align-items:center;
+        }
+        &__header {
+            font-size: 31px;
+        }
+        &__subheader {
+            font-size: 16px;
+        }
+        &__icons {
+            width: 370px;
+        }
+        .header {
+            &__contacts {
+                margin-right: 30px;
+            }
+            &__phone {
+                font-size: 14px;
+            }
+            button {
+                width: 132px;
+                font-size: 11px;
+                margin-top: 5px;
+            }
+            &__logo {
+                img {
+                    width: 89%;
+                }
+            }
+        }
+        .hamburger {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            transform: translateY(-50%);
+            width: 26px;
+            height: 12px;
+            span {
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: #fff;
+                margin-bottom: 4px;
+                transition: 0.5s all;
+            }
+            &_active {
+                span {
+                    margin-bottom: -2px;
+                    &:nth-child(1){
+                        transform: translateY(3px) rotate(-45deg);
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    &:nth-child(3){
+                        transform: translateY(3px) rotate(45deg);
+                    }
+                }
+            }
+        }
+    
+    }
+}

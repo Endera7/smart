@@ -1,0 +1,45 @@
+.advantages {
+    min-height: 473px;
+    padding: 73px 0 65px 0;
+    &__header {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #0d0d0d;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+    }
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        max-width: 252px;
+        img{
+            margin: 0 auto;
+            width: 70px;
+            height: 65px;
+        }
+
+    }
+    &__title {
+        margin-top: 35px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        color: #0d0d0d;
+    }
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.29;
+        text-align: center;
+        color: #0d0d0d;
+        a {
+            color: $main-color;
+            font-family: MuseoModerno;
+        }
+    }
+}

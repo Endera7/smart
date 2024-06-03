@@ -15,6 +15,7 @@
     .consultation {
         padding: 102px 50px 108px 50px;
     }
+
 }
 
 @media (max-width: 991px) {
@@ -46,6 +47,96 @@
             font-size: 34px;
         }
     }
+    .carousel {
+        padding-bottom: 70px;
+        .slick-slide {
+            img {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            left: -37px;
+            border: none;
+            background-color: #fff;
+            img {
+                width: 31px;
+                height: 50px;
+            }
+        }
+    
+        .slick-next {
+            right: -37px;
+            left: auto;
+        }
+    }
+    .catalog {
+     &__content {
+        justify-content: space-around;
+     }   
+    }
+    .reviews {
+        &__item {
+            justify-content: center;
+        }
+        &__descr {
+            width: 600px;
+        }
+    }
+}
+
+@media (max-width: 840px){
+    .carousel {
+        z-index: 1;
+        padding-bottom: 70px;
+        .slick-prev {
+            z-index: 2;
+        }
+        .slick-slide {
+            img {
+                position: relative;
+                width: 60%;
+                margin: 0 auto;
+            }
+        }
+        .slick-prev, .slick-next {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            left: 10px;
+            border: none;
+            background-color: #fff;
+            img {
+                width: 31px;
+                height: 50px;
+            }
+        }
+    
+        .slick-next {
+            right: 10px;
+            left: auto;
+        }
+    }
+    .reviews {
+        .title {
+            font-size: 26px;
+        }
+        &__item {
+            justify-content: center;
+        }
+        &__photo {
+            width: 140px;
+            height: 140px;
+        }
+        &__descr {
+            width: 500px;
+            font-size: 16px;
+        }
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -110,6 +201,51 @@
         }
         
     }
+    .catalog {
+        &__tabs {
+            width: 555px;
+        }
+        .title {
+            font-size: 26px;
+        }
+    }
+    .carousel {
+        &__inner {
+            .slick-dots {
+                display: flex;
+                justify-content: center;            }
+        }
+        button {
+            display: none;
+        }
+    }
+    .reviews {
+        .title {
+            font-size: 26px;
+        }
+           &__item {
+               justify-content: center;
+           }
+           &__descr {
+               width: 485px;
+               font-size: 15px;
+           }
+       }
+}
+
+@media (max-width: 700px){
+    .reviews {
+        .title {
+            font-size: 26px;
+        }
+           &__item {
+               justify-content: center;
+           }
+           &__descr {
+               width: 300px;
+               font-size: 15px;
+           }
+       }
 }
 
 @media (max-width: 575px) {
@@ -182,6 +318,52 @@
         
         &__title {
             font-size: 27px;
+        }
+    }
+    .catalog {
+        &__tabs {
+            width: 440px;
+        }
+        &__tab {
+            font-size: 14px;
+        }
+        .title {
+            font-size: 25px;
+        }
+    }
+    .reviews {
+        .title {
+            font-size: 26px;
+        }
+           &__item {
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+           }
+           &__text {
+            margin-top: 20px;
+            margin-left: 0;
+           }
+           &__name {
+            text-align: center;
+           }
+           &__statistics {
+            text-align: center;
+           }
+           &__descr {
+               width: 300px;
+               font-size: 15px;
+           }
+       }
+}
+
+@media (max-width: 470px) {
+    .catalog {
+        &__tabs {
+            width: 320px;
+        }
+        &__tab {
+            font-size: 10px;
         }
     }
 }

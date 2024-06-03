@@ -21,6 +21,16 @@
         right: -66px;
         left: auto;
     }
+
+    .slick-slide {
+        img {
+            width: 100%;
+        }
+    }
+
+    .slick-dots {
+        display: none;
+    }
     
 }
 

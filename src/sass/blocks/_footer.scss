@@ -41,6 +41,9 @@
         height: 50px;
         border: solid white;
         border-radius: 100%;
+        &:hover {
+            box-shadow: 3px 3px 10px white;
+        }
         img {
             height: 27px;
         }

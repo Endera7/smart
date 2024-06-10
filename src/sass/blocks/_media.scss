@@ -211,13 +211,27 @@
     }
     .carousel {
         &__inner {
-            .slick-dots {
-                display: flex;
-                justify-content: center;            }
+            width: 70%;
         }
-        button {
-            display: none;
+        img {
+            width: 100%;
         }
+        .slick-dots {
+            display: flex;
+            width: 100px;
+            margin: 0 auto;
+            button {
+                visibility: hidden;    
+           }
+        }
+        .slick-active {
+            color: $main-color;
+        }
+        .slick-slide {
+            img {
+                width: 100%;
+            }
+
     }
     .reviews {
         .title {
@@ -366,4 +380,20 @@
             font-size: 10px;
         }
     }
+    .footer {
+        &__info {
+            width: 100%;
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 70%;
+        }
+        .slick-slide {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
 }

@@ -18,10 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function(){
     $('.carousel__inner').slick({
-        speed: 1200,
+        speed: 1500,
         // adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src=icons/arrow_left.svg></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src=icons/arrow_right.svg></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src=icons/left.svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src=icons/right.svg></button>',
         responsive: [
             {
               breakpoint: 768,
@@ -29,8 +29,9 @@ $(document).ready(function(){
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                arrows:false,
-                dots: true
+                arrows: false,
+                dots: true,
+                
               }
             }
         ]
@@ -60,3 +61,30 @@ $(document).ready(function(){
         })
       });
   });
+
+  //Modal
+
+  $('[data-modal=consultation]').on('click', function() {
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+  });
+  $('[data-modal=order]').each(function(i) {
+    $(this).on('click', function() {
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn('slow');
+    })
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === "Escape") { // К условию можно добавить что окно уже открыто, проверить style.display
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow'); // Действие по закрытию окна
+    }
+  });
+  const overlay = document.querySelector('.overlay');
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    }
+});

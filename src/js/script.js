@@ -75,6 +75,7 @@ $(document).ready(function(){
         $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
         $('.overlay, #order').fadeIn('slow');
     })
+
   });
 
   document.addEventListener('keydown', (e) => {
@@ -88,3 +89,39 @@ overlay.addEventListener('click', (e) => {
         $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     }
 });
+
+//Validate
+
+function valideForms(form){
+  $(form).validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, введите ваше имя",
+        minlength: jQuery.validator.format("Введите {0} символа!")
+      },
+      phone: "Пожалуйста, введите ваш номер телефона",
+      email: {
+        required: "Пожалуйста, введите вашу почту ",
+        email: "Ваш почтовы адрес должен иметь формат: name@domain.com"
+      }
+    }
+  });
+}
+valideForms('#order form');
+valideForms('#consultation-form');
+valideForms('#consultation form');
+
+//Mask
+
+$('input[name=phone]').mask("+375(99) 999-99-99");

@@ -89,11 +89,11 @@
 			Просто заполните форму заявки<br>
 			и мы перезвоним вам в течении 10 минут
 		</div>
-		<form class="feed-form" action="#">
+		<form id="consultation-form" class="feed-form" action="#">
 			<input placeholder="Ваше имя" name="name" type="text">
-			<input placeholder="Ваш телефон" name="phone" type="number">
+			<input placeholder="Ваш телефон" name="phone">
 			<input placeholder="Ваш e-mail" name="email" type="e-mail">
-			<button class="button button__submit" data-modal="consultation">заказать кОНСУЛЬТАЦИЮ</button>
+			<button class="button button__submit">заказать кОНСУЛЬТАЦИЮ</button>
 		</form>
 	</section>
    </div>
@@ -422,7 +422,7 @@
         <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
         <form class="feed-form" action="#">
 			<input placeholder="Ваше имя" name="name" type="text">
-			<input placeholder="Ваш телефон" name="phone" type="number">
+			<input placeholder="Ваш телефон" name="phone">
 			<input placeholder="Ваш e-mail" name="email" type="e-mail">
 			<button class="button button__submit">заказать кОНСУЛЬТАЦИЮ</button>
 		</form>
@@ -433,9 +433,9 @@
         <div class="modal__subtitle">Ваш заказ</div>
         <div class="modal__descr">Пульсометр Polar FT1</div>
         <form class="feed-form" action="#">
-			<input placeholder="Ваше имя" name="name" type="text">
-			<input placeholder="Ваш телефон" name="phone" type="number">
-			<input placeholder="Ваш e-mail" name="email" type="e-mail">
+			<input required placeholder="Ваше имя" name="name" type="text">
+			<input required placeholder="Ваш телефон" name="phone">
+			<input required placeholder="Ваш e-mail" name="email" type="e-mail">
 			<button class="button button__submit">Купить</button>
 		</form>
     </div>
@@ -450,6 +450,8 @@
    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 </html>
